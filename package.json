@@ -1,0 +1,25 @@
+{
+  "name": "ts-node-starter",
+  "version": "0.0.1",
+  "author": "Ville Vainio",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "start:dev": "ts-node-dev --respawn --transpileOnly src/index.ts",
+    "start": "yarn build && node build/index.js",
+    "lint": "eslint . --ext .ts",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "@typescript-eslint/eslint-plugin": "^3.0.1",
+    "@typescript-eslint/parser": "^3.0.1",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.0",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.6.2"
+  }
+}
